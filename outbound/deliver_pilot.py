@@ -43,7 +43,7 @@ def deliver_pilot(recipient_email, recipient_name):
         return
 
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = "OFFICIAL ACCESS: Your Verified Polk County Roofing Leads & Exclusive Territory"
+    msg["Subject"] = "CONFIRMED: Your Polk County Roofing Leads & Payment Link"
     msg["From"] = f"{from_name} <{sender_email}>"
     msg["To"] = recipient_email
     
