@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permit Arbitrage — Outbound Dashboard</title>
+  <meta name="description" content="Permit Arbitrage outbound email campaign control center. Preview, edit, and send cold outreach to contractors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/dashboard.css" />
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="topbar">
+  <div class="topbar-brand">
+    <div class="brand-icon">PA</div>
+    <div>
+      <div class="brand-title">Permit Arbitrage</div>
+      <div class="brand-sub">Outbound Campaign Dashboard</div>
+    </div>
+  </div>
+  <div class="topbar-status">
+    <div class="status-dot" id="statusDot"></div>
+    <span id="statusLabel">Idle</span>
+    <button class="btn btn-ghost" id="cleanupBtn" style="margin-left: 15px; font-size: 0.7rem; padding: 4px 8px;">Clean & Archive</button>
+  </div>
+</header>
+
+<!-- ── Controls Bar ───────────────────────────────────────────── -->
+<section class="controls-bar">
+  <div class="control-group">
+    <label for="fileSelect">Prospect List</label>
+    <select id="fileSelect" class="ctrl-select"></select>
+  </div>
+  <div class="control-group">
+    <label for="countyInput">County</label>
+    <input id="countyInput" class="ctrl-input" type="text" value="Leon County" />
+  </div>
+  <div class="control-group">
+    <label for="templateSelect">Template</label>
+    <select id="templateSelect" class="ctrl-select">
+      <option value="B" selected>B — Small-City Angle</option>
+      <option value="A">A — Standard</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label for="senderInput">Sign-off Name</label>
+    <input id="senderInput" class="ctrl-input" type="text" value="James" />
+  </div>
+  <div class="control-group">
+    <label for="delayInput">Delay (sec)</label>
+    <input id="delayInput" class="ctrl-input" type="number" value="45" min="10" max="300" style="width:80px" />
+  </div>
+  <button class="btn btn-ghost" id="loadBtn">&#8635; Load Preview</button>
+</section>
+
+<!-- ── Stats Bar ──────────────────────────────────────────────── -->
+<section class="stats-bar" id="statsBar">
+  <div class="stat-card">
+    <div class="stat-num" id="statTotal">—</div>
+    <div class="stat-label">Total Prospects</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num" id="statSelected">—</div>
+    <div class="stat-label">Selected to Send</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num stat-green" id="statSent">—</div>
+    <div class="stat-label">Sent This Session</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num stat-red" id="statFailed">—</div>
+    <div class="stat-label">Failed</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num stat-amber" id="statPermits">—</div>
+    <div class="stat-label">Permits in County</div>
+  </div>
+</section>
+
+<!-- ── Main Layout ────────────────────────────────────────────── -->
+<main class="layout">
+
+  <!-- Prospect List Panel -->
+  <aside class="panel panel-left">
+    <div class="panel-header">
+      <span>Prospects</span>
+      <div class="header-actions">
+        <button class="btn-icon" id="selectAllBtn" title="Select All">&#10003; All</button>
+        <button class="btn-icon" id="deselectAllBtn" title="Deselect All">&#10005; None</button>
+      </div>
+    </div>
+    <div id="prospectList" class="prospect-list">
+      <div class="empty-state">Click "Load Preview" to start.</div>
+    </div>
+  </aside>
+
+  <!-- Email Editor Panel -->
+  <section class="panel panel-right">
+    <div class="panel-header">
+      <span id="editorTitle">Email Editor</span>
+      <div class="header-actions">
+        <button class="btn-icon" id="resetEmailBtn" title="Reset to template">&#8635; Reset</button>
+      </div>
+    </div>
+    <div class="editor-body" id="editorBody">
+      <div class="empty-state">Select a prospect to preview or edit their email.</div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Action Footer ─────────────────────────────────────────── -->
+<footer class="action-footer">
+  <div class="footer-left">
+    <div class="progress-track">
+      <div class="progress-bar" id="progressBar" style="width:0%"></div>
+    </div>
+    <span class="progress-label" id="progressLabel">Ready</span>
+  </div>
+  <div class="footer-right">
+    <button class="btn btn-danger" id="abortBtn" disabled>&#9632; Abort</button>
+    <button class="btn btn-primary" id="sendBtn" disabled>&#9654; Send Campaign</button>
+  </div>
+</footer>
+
+<!-- ── Send Confirmation Modal ────────────────────────────────── -->
+<div class="modal-overlay" id="confirmModal">
+  <div class="modal">
+    <div class="modal-icon">&#9888;</div>
+    <h2 class="modal-title">Confirm Send</h2>
+    <p class="modal-body" id="modalBody">You are about to send real emails.</p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="cancelSendBtn">Cancel</button>
+      <button class="btn btn-primary" id="confirmSendBtn">Yes, Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Quick Cleanup Handler
+  document.getElementById('cleanupBtn').onclick = async () => {
+    if (!confirm("This will sort and archive all CSV files in your output folder. Proceed?")) return;
+    const btn = document.getElementById('cleanupBtn');
+    btn.disabled = true;
+    btn.innerText = "Cleaning...";
+    try {
+      const resp = await fetch('/api/run_cleanup', { method: 'POST' });
+      const data = await resp.json();
+      alert(data.message || "Cleanup Complete");
+      window.location.reload(); // Refresh to update file lists
+    } catch (e) {
+      alert("Error: " + e);
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Clean & Archive";
+    }
+  };
+</script>
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>

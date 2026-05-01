@@ -1,0 +1,23 @@
+[
+  {
+    "permit_type": "Residential Reroof",
+    "issue_date": "2026-04-28",
+    "property_address": "299 HAWKBILL CT, Tallahassee FL 32312",
+    "owner_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Residential Reroof",
+    "issue_date": "2026-04-27",
+    "property_address": "8787 LOUVINIA WAY, Tallahassee FL 32311",
+    "owner_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Residential Reroof",
+    "issue_date": "2026-04-27",
+    "property_address": "5584 HAMPTON HILL CIR, Tallahassee FL 32311",
+    "owner_name": "",
+    "job_valuation": ""
+  }
+]

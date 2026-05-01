@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Permit Lead Alert</title>
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #F8FAFC; color: #1A202C; margin: 0; padding: 0; }
+        .wrapper { width: 100%; table-layout: fixed; background-color: #F8FAFC; padding-bottom: 40px; }
+        .main { background-color: #FFFFFF; margin: 0 auto; width: 100%; max-width: 600px; border-spacing: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .header { background-color: #0088FF; padding: 40px 20px; text-align: center; color: #FFFFFF; }
+        .content { padding: 40px 30px; }
+        .badge { display: inline-block; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px; }
+        .badge-urgent { background-color: #E0F2FE; color: #0369A1; }
+        .project-title { font-size: 24px; font-weight: 800; margin: 0 0 10px 0; color: #1A202C; }
+        .project-loc { font-size: 16px; color: #64748B; margin-bottom: 30px; }
+        .data-grid { border-top: 1px solid #E2E8F0; padding-top: 30px; margin-top: 30px; }
+        .data-row { margin-bottom: 20px; }
+        .data-label { font-size: 11px; font-weight: 700; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+        .data-value { font-size: 16px; font-weight: 600; color: #1A202C; }
+        .valuation { font-size: 28px; font-weight: 800; color: #10B981; }
+        .btn { display: inline-block; background-color: #0088FF; color: #FFFFFF; padding: 18px 36px; border-radius: 12px; font-weight: 700; text-decoration: none; text-align: center; width: 100%; box-sizing: border-box; }
+        .footer { padding: 30px; text-align: center; font-size: 12px; color: #94A3B8; }
+    </style>
+</head>
+<body>
+    <center class="wrapper">
+        <table class="main" width="100%">
+            <tr>
+                <td class="header">
+                    <div style="font-size: 12px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 10px; opacity: 0.9;">PermitLeads Exclusive</div>
+                    <div style="font-size: 32px; font-weight: 800;">New Project Alert</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <div class="badge badge-urgent">Time Sensitive Opportunity</div>
+                    <h1 class="project-title">{{ permit_type }}</h1>
+                    <div class="project-loc">{{ property_address }}</div>
+
+                    <div class="data-grid">
+                        <table width="100%">
+                            <tr>
+                                <td width="50%" class="data-row">
+                                    <div class="data-label">Estimated Valuation</div>
+                                    <div class="data-value valuation">${{ job_valuation }}</div>
+                                </td>
+                                <td width="50%" class="data-row">
+                                    <div class="data-label">Date Filed</div>
+                                    <div class="data-value">{{ issue_date }}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" colspan="2" class="data-row">
+                                    <div class="data-label">Homeowner Info</div>
+                                    <div class="data-value">{{ owner_name }}</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <a href="{{ dashboard_url }}" class="btn">Claim This Project Now</a>
+                    </div>
+                    
+                    <div style="margin-top: 30px; font-size: 14px; color: #64748B; line-height: 1.6; text-align: center;">
+                        This lead is exclusive to your territory and has been captured <strong>in real-time</strong>. 
+                        <br><br>
+                        <span style="font-size: 12px; color: #94A3B8;">
+                            <strong>Legal Compliance Notice:</strong> Do not cold call or text homeowner phone numbers without verified prior written consent (TCPA/FTSA). Best results are achieved through direct mail or on-site visits.
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer">
+                    &copy; 2026 PermitLeads. All rights reserved. <br>
+                    You are receiving this because you have an active territory subscription for <strong>{{ jurisdiction }}</strong>.
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

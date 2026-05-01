@@ -1,0 +1,101 @@
+[
+  {
+    "permit_type": "Pool Permit",
+    "issue_date": "2026-04-29",
+    "property_address": "9 CRYSTAL WATERS DR, WINTER HAVEN FL 33880",
+    "owner_name": "",
+    "owner_first_name": "",
+    "owner_last_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-05-01",
+    "property_address": "81 SUNSET VIEW DR, WINTER HAVEN FL 33884",
+    "owner_name": "",
+    "owner_first_name": "",
+    "owner_last_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-05-01",
+    "property_address": "115 LANCASTER DR, DAVENPORT FL 33897",
+    "owner_name": "",
+    "owner_first_name": "",
+    "owner_last_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-04-30",
+    "property_address": "2418 FAN PALM DR, DAVENPORT FL 33897",
+    "owner_name": "",
+    "owner_first_name": "",
+    "owner_last_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-04-30",
+    "property_address": "2807 FAN PALM DR, DAVENPORT FL 33897",
+    "owner_name": "",
+    "owner_first_name": "",
+    "owner_last_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-04-29",
+    "property_address": "8080 DEER RUN DR, LAKE WALES FL 33898",
+    "owner_name": "Skip to main content",
+    "owner_first_name": "Skip",
+    "owner_last_name": "To Main Content",
+    "job_valuation": "7000.00"
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-04-28",
+    "property_address": "4056 SE CENTRAL AVE, HIGHLAND CITY FL 33846",
+    "owner_name": "",
+    "owner_first_name": "",
+    "owner_last_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-04-28",
+    "property_address": "310 NE 17TH ST, WINTER HAVEN FL 33881",
+    "owner_name": "",
+    "owner_first_name": "",
+    "owner_last_name": "",
+    "job_valuation": ""
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-04-28",
+    "property_address": "5600 CHARLIE HARRIS RD, LAKE WALES FL 33898",
+    "owner_name": "Skip to main content",
+    "owner_first_name": "Skip",
+    "owner_last_name": "To Main Content",
+    "job_valuation": "4200.00"
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-04-28",
+    "property_address": "155 OLD BOWLING GREEN RD, BOWLING GREEN FL 33834",
+    "owner_name": "Skip to main content",
+    "owner_first_name": "Skip",
+    "owner_last_name": "To Main Content",
+    "job_valuation": "3000.00"
+  },
+  {
+    "permit_type": "Re-Roof Permit",
+    "issue_date": "2026-04-28",
+    "property_address": "700 N CLEVELAND AVE, FORT MEADE FL 33841",
+    "owner_name": "Skip to main content",
+    "owner_first_name": "Skip",
+    "owner_last_name": "To Main Content",
+    "job_valuation": "5400.00"
+  }
+]

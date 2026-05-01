@@ -1,0 +1,87 @@
+[
+  {
+    "email": "office@tadlockroofing.com",
+    "business": "Tadlock Roofing",
+    "niche": "Roofing Contractors",
+    "subject": "We just expanded permit tracking to Leon County - 3 leads this week",
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ed1bf8e77bsm4097487eec.11 - gsmtp')",
+    "timestamp": "2026-04-29T14:41:23.915528"
+  },
+  {
+    "email": "sales@roweroofing.com",
+    "business": "Rowe Roofing",
+    "niche": "Roofing Contractors",
+    "subject": "We just expanded permit tracking to Leon County - 3 leads this week",
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ed1c07057csm5965067eec.18 - gsmtp')",
+    "timestamp": "2026-04-29T14:42:10.404543"
+  },
+  {
+    "email": "office@salvopools.com",
+    "business": "Salvo Pools",
+    "niche": "Pool Contractors",
+    "subject": "We just expanded permit tracking to Leon County - 3 leads this week",
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12de320ecf9sm5500280c88.2 - gsmtp')",
+    "timestamp": "2026-04-29T14:43:12.690760"
+  },
+  {
+    "email": "info@southernpoolscapes.com",
+    "business": "Southern Poolscapes",
+    "niche": "Pool Contractors",
+    "subject": "We just expanded permit tracking to Leon County - 3 leads this week",
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ed1bf8e2d1sm4185353eec.8 - gsmtp')",
+    "timestamp": "2026-04-29T14:43:58.662441"
+  },
+  {
+    "email": "info@mysticpoolsusa.com",
+    "business": "Mystic Pools",
+    "niche": "Pool Contractors",
+    "subject": "We just expanded permit tracking to Leon County - 3 leads this week",
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ed1bf8e268sm3951964eec.12 - gsmtp')",
+    "timestamp": "2026-04-29T14:44:44.523227"
+  },
+  {
+    "email": "support@trimmroofing.com",
+    "business": "Trimm Roofing",
+    "niche": "Roofing Contractors",
+    "subject": "We just expanded permit tracking to Polk County - 11 leads this week",
+    "status": "sent",
+    "timestamp": "2026-05-01T10:56:56.080983"
+  },
+  {
+    "email": "HarperRoofingFL@gmail.com",
+    "business": "Harper Roofing",
+    "niche": "Roofing Contractors",
+    "subject": "We just expanded permit tracking to Polk County - 11 leads this week",
+    "status": "sent",
+    "timestamp": "2026-05-01T10:57:41.622409"
+  },
+  {
+    "email": "lakelandroofingsolutions@gmail.com",
+    "business": "Lakeland Roofing Solutions",
+    "niche": "Roofing Contractors",
+    "subject": "We just expanded permit tracking to Polk County - 11 leads this week",
+    "status": "sent",
+    "timestamp": "2026-05-01T10:58:27.157048"
+  },
+  {
+    "email": "rodenpools@gmail.com",
+    "business": "Roden Pools",
+    "niche": "Pool Contractors",
+    "subject": "We just expanded permit tracking to Polk County - 11 leads this week",
+    "status": "sent",
+    "timestamp": "2026-05-01T10:59:12.684782"
+  },
+  {
+    "email": "info@mannixpools.net",
+    "business": "Mannix Pools & Grills",
+    "niche": "Pool Contractors",
+    "subject": "We just expanded permit tracking to Polk County - 11 leads this week",
+    "status": "sent",
+    "timestamp": "2026-05-01T10:59:58.203697"
+  }
+]

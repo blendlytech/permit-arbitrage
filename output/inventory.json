@@ -1,0 +1,14 @@
+{
+  "total_leads": 251,
+  "counties": {
+    "Hillsborough": 109,
+    "Leon": 3,
+    "Pasco": 1,
+    "Polk": 1,
+    "Hillsborough_County_FL_(unincorporated_Tampa_area)": 121,
+    "Leon_County_FL_(Tallahassee_+_unincorporated)": 3,
+    "Pasco_County_FL": 1,
+    "Polk_County_FL": 12
+  },
+  "last_cleanup": "2026-04-30 18:52:19"
+}
